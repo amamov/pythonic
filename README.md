@@ -1,6 +1,6 @@
 # Pythonic - 파이썬스럽다
 
-Python 언어에 대한 고찰 & 기본 문법 
+Python 언어에 대한 고찰 & 기본 문법
 
 ## Python Set Up - for mac OS
 
@@ -61,6 +61,7 @@ Python 언어에 대한 고찰 & 기본 문법
 9. pipenv 명령어
 
    - \$ pipenv run python3 my_code.py : 가상환경에서 코드 실행하기
+   - \$ alias prp="pipenv run python3" : 코드 단축어 별칭
    - \$ pipenv install : 협업 프로젝트를 할때, 프로젝트의 모든 개발자들은 Git 저장소에 올려둔 Pipfile 파일과 Pipfile.lock 파일을 내려받은 후에 pipenv install 커맨드로 모든 패키지를 한 번에 설치할 수 있다.
    - \$ pipenv --where : Output project home information.
    - \$ pipenv graph : 프로젝트에 설치된 패키지들을 트리 구조로 시각화하여 보여준다.

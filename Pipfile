@@ -7,6 +7,7 @@ verify_ssl = true
 black = "*"
 
 [packages]
+typing = "*"
 
 [requires]
 python_version = "3.8"
