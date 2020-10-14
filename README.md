@@ -1,6 +1,6 @@
-# Pythonic
+# Pythonic - 파이썬스럽다
 
-파이썬스럽다
+Python 언어에 대한 고찰 & 기본 문법 
 
 ## Python Set Up - for mac OS
 
