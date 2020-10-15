@@ -1,13 +1,15 @@
 # [Python의 데티터 타입 종류]
 
-# Boolean
-# Number
-# String
-# Bytes
-# Lists (집합 자료형)
-# Tuples (집합 자료형)
-# Sets (집합 자료형)
-# Dictionary (집합 자료형)
+"""
+Boolean
+Number
+String
+Bytes
+Lists (집합 자료형)
+Tuples (집합 자료형)
+Sets (집합 자료형)
+Dictionary (집합 자료형)
+"""
 
 my_str = "amamov"
 my_bool = True
