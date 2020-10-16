@@ -17,3 +17,11 @@ print(my_set_1 & my_set_2)  # {3}
 print(my_set_1 | my_set_2)  # {1, 2, 3, 4, 5}
 
 print(my_set_1 - my_set_2)  # {1, 2}
+
+# 추가
+my_set_1.add(18)
+print(my_set_1)  # {18, 1, 2, 3}
+
+# 제거
+my_set_1.remove(18)
+print(my_set_1)  # {1, 2, 3}

@@ -1,13 +1,13 @@
 #### str : 한번 선언하면 수정이 불가능하고(immutable) 순회 가능한 sequence
 
 """
-.split()
 .strip()
 .replace(old, new, count)
 .find(value)
 .count(value)
 .upper()
 .lower()
+.split()
 .join(list or str or ...)
 """
 
