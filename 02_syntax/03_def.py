@@ -47,13 +47,19 @@ print(plus(1, 2, 3, 4, 5, 6, 7, 8, 9, 10))  # 55
 
 
 #### 초기값을 미리 설정할 수 있다.
-def multi(a, b, c=100):
-    return a * b * c
+def default_func(arg1, arg2, x=100, y=200):
+    print("arg1 : ", arg1, end=", ")
+    print("arg2 : ", arg2, end=", ")
+    print("x : ", x, end=", ")
+    print("y : ", y)
 
 
-print(multi(1, 3, 5))  # 15
-print(multi(1, 3))  # 300
-
+default_func(1, 3, 5)
+# arg1 :  1, arg2 :  3, x :  5, y :  200
+default_func(1, 3)
+# arg1 :  1, arg2 :  3, x :  100, y :  200
+default_func(1, 3, y=5, x=4)
+# arg1 :  1, arg2 :  3, x :  4, y :  5
 
 #### 중첩함수(클로저) : 함수 안에 있는 함수
 def nested_func(arg):
