@@ -64,8 +64,10 @@ def default_func(arg1, arg2, x=100, y=200):
 
 default_func(1, 3, 5)
 # arg1 :  1, arg2 :  3, x :  5, y :  200
+
 default_func(1, 3)
 # arg1 :  1, arg2 :  3, x :  100, y :  200
+
 default_func(1, 3, y=5, x=4)
 # arg1 :  1, arg2 :  3, x :  4, y :  5
 
@@ -98,17 +100,25 @@ print(print_hello_world("Hello", 3))
 ### [Point 5] Lambda식 표현
 
 ```
-# 일반적인 함수
+#### 일반적인 함수
 def mul_10(num: int) -> int:
     return num * 10
 
 
 var_func = mul_10
-print(var_func)  # <function mul_10 at 0x7fed96ec15f0> : 함수의 객체가 생성되어 메모리에 할당되었다.
-print(type(var_func))  # <class 'function'>
 
-# Lambda 함수
+print(var_func)  
+# <function mul_10 at 0x7fed96ec15f0> : 함수의 객체가 생성되어 메모리에 할당되었다.
+
+print(type(var_func))  
+# <class 'function'>
+
+#### Lambda 함수
 lambda_mul_10 = lambda num: num * 10
-print(lambda_mul_10)  # <function <lambda> at 0x7f876258e3b0>
-print(lambda_mul_10(10))  # 100
+
+print(lambda_mul_10)  
+# <function <lambda> at 0x7f876258e3b0>
+
+print(lambda_mul_10(10))  
+# 100
 ```
