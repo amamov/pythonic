@@ -15,32 +15,47 @@
 
 
 class UserInfo:
-    # 클래스 네임의 첫번째는 반드시 대문자로 하자!
+    ## 클래스 네임의 첫번째는 반드시 대문자로 하자!
 
     def __init__(self, name):
-        # 인스턴스 변수
+        ## 인스턴스 변수
         self.name = name
 
     def user_info_print(self):
-        # 메서드
+        ## 메서드
         print("Name : ", self.name)
 
 
-user1 = UserInfo("joy")  # 인스턴스
+## 인스턴스
+user1 = UserInfo("joy")
 print(user1.name)
-user1.user_info_print()
+# joy
 
-user2 = UserInfo("amamov")  # 인스턴스
+## 인스턴스 메서드 호출
+user1.user_info_print()
+# Name :  joy
+
+## 인스턴스
+user2 = UserInfo("amamov")
 print(user2.name)
+# amamov
+
+## 인스턴스 메서드 호출
 user2.user_info_print()
+# Name :  amamov
 
 print(id(user1))
-print(id(user2))
+# 140424922290960
 
-print(user1.__dict__)  # user1 인스턴스 변수의 네임스페이스
+print(id(user2))
+# 140424922290960
+
+# user1 인스턴스 변수의 네임스페이스
+print(user1.__dict__)
 # {'name': 'joy'}
 
-print(user2.__dict__)  # user2 인스턴스 변수의 네임스페이스
+# user1 인스턴스 변수의 네임스페이스
+print(user2.__dict__)
 # {'name': 'amamov'}
 
 
@@ -59,19 +74,28 @@ class SelfTest:
         print("function 2 called !")
 
 
+# 인스턴스
 test_instance = SelfTest()
 
 # 클래스 변수는 클래스의 네임스페이스에 저장된다.
-print(SelfTest.__dict__)  # {'name': 'amamov', ...}
-print(test_instance.__dict__)  # {}
+print(SelfTest.__dict__)
+# {'__module__': '__main__', 'name': 'amamov', 'function1': <function SelfTest.function1 at 0x7ff841bc95f0>, 'function2': <function SelfTest.function2 at 0x7ff841bc9680>, '__dict__': <attribute '__dict__' of 'SelfTest' objects>, '__weakref__': <attribute '__weakref__' of 'SelfTest' objects>, '__doc__': None}
+
+print(test_instance.__dict__)
+# {}
 
 print(SelfTest.name)  # amamov
 print(test_instance.name)  # amamov
 # 인스턴스를 통해 변수에 접근하면 파이썬은 먼저 인스턴스의 네임스페이스에서 해당 변수가 존재하는지 찾는다.
 # 해당 인스턴스의 네임스페이스에 해당 변수가 존재하지 않으면 클래스의 네임스페이스로 가서 다시 변수를 찾게 된다.
 
+# 클레스 메서드는 인스턴스에서는 호출 불가능
 # self_instance.function1() # error
-SelfTest.function1()  # 인스턴스에서는 호출 불가능
+
+SelfTest.function1()
+# function 1 called !
+
 test_instance.function2()
+# function 2 called !
 
 print(id(test_instance))  # 140514431978576
