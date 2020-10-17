@@ -8,6 +8,8 @@ black = "*"
 
 [packages]
 typing = "*"
+matlab = "*"
+matplotlib = "*"
 
 [requires]
 python_version = "3.8"

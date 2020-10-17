@@ -1,13 +1,4 @@
 # [for]
-a = [1, 2, 3, 4, 5]
-b = [10, 20, 30, 40, 50]
-ab_sum = []
-
-for i in b:
-    for j in a:
-        ab_sum.append(i + j)
-
-print(ab_sum)
 
 for i in range(5):
     print(i, end=" ")
@@ -20,6 +11,41 @@ print()
 for i in range(0, -9, -2):
     print(i, end=" ")
 print()
+##### iterable 한 것들은 모두 순회 가능하다. : list, tuple, set, string, dictionary, ...
+
+## list
+my_list = [2, 3, 5, 7]
+
+for i in my_list:
+    print(i, end=" ")
+print()
+
+for idx, value in enumerate(my_list):
+    print(idx, value)
+
+## dictionary
+my_dict = {
+    "name": "amamov",
+    "age": 23,
+    "city": "Seoul",
+}
+
+for key in my_dict:
+    print("key : ", key)
+
+for values in my_dict.values():
+    print("value : ", key)
+
+for key in my_dict.keys():
+    print("key : ", key)
+
+for key, value in my_dict.items():
+    print("key, value : ", key, value)
+
+## set
+my_set = set((2, 9, 3, 7, 1, 100, 1000))
+for i in my_set:
+    print(i)
 
 ######### enumerate #########
 name = ["yoon", "kim", "lee"]
@@ -50,7 +76,7 @@ r = [i * j for i in range(1, 5) for j in range(1, 3) if i * j % 2]
 print(r)  # [1, 3]
 
 
-######################################################################
+print("######################################################################")
 # [while]
 i = 0
 sum = 0

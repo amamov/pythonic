@@ -66,3 +66,17 @@ Python 언어에 대한 고찰 & 기본 문법
    - \$ pipenv --where : Output project home information.
    - \$ pipenv graph : 프로젝트에 설치된 패키지들을 트리 구조로 시각화하여 보여준다.
    - \$ pipenv check : 보안 취약점이 있는 패키지가 설치되어 있는지 간단하게 체크 가능
+
+#### 코드 실행 시간 측정
+
+```
+import time
+
+start = time.time()  # 시작 시간 저장
+
+
+# 작업 코드
+
+
+print("time :", time.time() - start)
+```
