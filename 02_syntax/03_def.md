@@ -6,7 +6,9 @@
 
 2. 함수 또한 객체이므로 변수에 저장, 함수에 인자로 함수 전달 등이 가능하다.
 
-3. Lambda식 표현 : 메모리 절약, 가독성 향상, 코드 간결 --> 함수는 객체 생성을 한다. (메모리 할당) But Lambda는 즉시 실행된다. (Heap 초기화; 메모리 초기화)
+3. Lambda식 표현 : 메모리 절약, 가독성 향상, 코드 간결 --> 일반적인 함수는 객체 생성을 한다.(메모리 할당) But Lambda는 즉시 실행된다.(Heap 초기화; 메모리 초기화)
+
+---
 
 ### 전역변수 & 지역변수
 
@@ -17,6 +19,8 @@
 - 전역변수는 프로그램 어디서는 전역으로 사용할 수 있다. 하지만 함수 안에서 전역변수에 새로운 값을 대입할 수는 없다. 파이썬에서 전역변수는 함수 안에서 읽을 수는 있지만 수정이 불가능하다.
 
 - 함수 안에서 전역변수를 수정할 수 없지만 global 문을 이용하면 전역변수를 함수 안에서 수정할 수 있다.
+
+---
 
 ### How Use ?
 
@@ -42,6 +46,8 @@ function(1, 2, 3, 4, 5, 6, 7, 8, 9, what=False, why=True, Hello="Hello world!")
 # kwargs :  <class 'dict'>
 ```
 
+---
+
 ### [Point 1] 단일 파라미터는 다중 파라미터보다 먼저 와야한다.
 
 ```
@@ -51,6 +57,8 @@ def plus(number1, *number):
 
 print(plus(1, 2, 3, 4, 5, 6, 7, 8, 9, 10))  # 55
 ```
+
+---
 
 ### [Point 2] 초기값을 미리 설정할 수 있다.
 
@@ -73,6 +81,8 @@ default_func(1, 3, y=5, x=4)
 
 ```
 
+---
+
 ### [Point 3] 중첩함수(클로저) : 함수 안에 함수
 
 ```
@@ -87,6 +97,8 @@ def nested_func(arg):
 nested_func(100)  # 200
 ```
 
+---
+
 ### [Point 4] Hint
 
 ```
@@ -97,28 +109,34 @@ def print_hello_world(hello: str, count: int) -> list:
 print(print_hello_world("Hello", 3))
 ```
 
+---
+
 ### [Point 5] Lambda식 표현
 
+- 일반적인 함수
+
 ```
-#### 일반적인 함수
 def mul_10(num: int) -> int:
     return num * 10
 
 
 var_func = mul_10
 
-print(var_func)  
+print(var_func)
 # <function mul_10 at 0x7fed96ec15f0> : 함수의 객체가 생성되어 메모리에 할당되었다.
 
-print(type(var_func))  
+print(type(var_func))
 # <class 'function'>
+```
 
-#### Lambda 함수
+- Lambda 함수
+
+```
 lambda_mul_10 = lambda num: num * 10
 
-print(lambda_mul_10)  
+print(lambda_mul_10)
 # <function <lambda> at 0x7f876258e3b0>
 
-print(lambda_mul_10(10))  
+print(lambda_mul_10(10))
 # 100
 ```
