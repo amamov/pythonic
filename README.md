@@ -1,6 +1,6 @@
 # Pythonic - 파이썬스럽다
 
-Python 언어에 대한 고찰 & 기본 문법
+Python 언어에 대한 고찰 & 기본 문법 & 성능 최적화
 
 ## Python Set Up - for mac OS
 
