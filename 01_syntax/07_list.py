@@ -78,9 +78,10 @@ print(my_list)
 my_list.pop()
 print(my_list)
 
-#### myList.insert(n, x) : 리스트의 n번째 위치에 x를 삽입 (수정)
+#### myList.insert(n, x) : 리스트의 n번째 위치에 x를 삽입; n번째 요소는 뒤로 밀려난다. (수정)
 my_list.insert(0, 100)
-print(my_list)
+print("insert : ", my_list)
+# [100, 2, 5, 7, 11, 13, 15]
 
 # myList.reverse( ) : 리스트를 내림차순으로 정렬시킨다.(자료형이 문자일경우 알파벳 순서대로)
 my_list.reverse()

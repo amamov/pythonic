@@ -1,7 +1,9 @@
-print("fcking world")  # fcking world
+print("fcking world")
+# fcking world
 
 # [연결연산자]
-print("ama" + "mov" + " 1205")  # amamov 1205
+print("ama" + "mov" + " 1205")
+# amamov 1205
 
 # [end=""]
 print("sangseok", end=" sexy")  # sangseok sexy
