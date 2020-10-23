@@ -13,11 +13,12 @@
 
 escape_str = 'Hello "my Name is amamov "'
 print(escape_str)
+# Hello "my Name is amamov "
 
-#### Raw String
-# \t : 탭 but Raw String은 그대로 출력한다.
+#### Raw String (그대로 출력한다.)
 raw_s1 = r"C:\pgograms\t\fuck\n\wow"
 print(raw_s1)
+# C:\pgograms\t\fuck\n\wow
 
 #### 멀티 라인
 multi = """
@@ -45,7 +46,8 @@ print(my_str.split())  # ['amamov']
 print(my_str.split("a"))  # ['', 'm', 'mov']
 
 #### strip() : 인자로 전달된 문자를 my_str의 왼쪽과 오른쪽에서 제거한다. (공백을 제거할 때 많이 쓰인다.)
-print(my_str.strip())  # 공백 제거
+print(my_str.strip())  # 공백이 제거된 문자열을 반환한다.
+# amamov
 
 #### replace(old, new, count) : 수정된 문자열을 반환한다.
 print(my_str.replace("a", "x", 1))  #  xmamov
@@ -65,7 +67,7 @@ print(my_str.upper())  #  AMAMOV
 
 #### lower() : 문자열의 대문자를 소문자로 바꾼다.
 
-#### jon
+#### join
 print("amamov".join("ss"))  # samamovs
 
 # list -> str

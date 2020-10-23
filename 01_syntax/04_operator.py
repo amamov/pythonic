@@ -14,11 +14,11 @@ abs(c)  # 7
 x = 10.0
 y = 10
 _y = 10
-print(type(x))
-print(type(y))
-print(x == y)
-print(x is y)
-print(y is _y)
+print(type(x))  # <class 'float'>
+print(type(y))  # <class 'int'>
+print(x == y)  # True
+print(x is y)  # False
+print(y is _y)  # True
 
 # 수치 연산 함수
 print(abs(-7))  # 7

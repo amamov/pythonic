@@ -55,3 +55,8 @@ if "phone" in my_dic:  # NULL
     print("In")
 else:
     print("NULL")
+
+### key가 문자열일 경우 아래와 같이 정의할 수 있다.
+my_dict_2 = dict(a=2, b=3, c=4)
+print(my_dict_2)
+# {'a': 2, 'b': 3, 'c': 4}

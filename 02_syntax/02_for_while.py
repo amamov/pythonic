@@ -1,5 +1,5 @@
 # [for]
-
+print("for 루핑 기본")
 for i in range(5):
     print(i, end=" ")
 print()
@@ -14,6 +14,7 @@ print()
 ##### iterable 한 것들은 모두 순회 가능하다. : list, tuple, set, string, dictionary, ...
 
 ## list
+print("list 순회")
 my_list = [2, 3, 5, 7]
 
 for i in my_list:
@@ -24,6 +25,7 @@ for idx, value in enumerate(my_list):
     print(idx, value)
 
 ## dictionary
+print("dictionary 순회")
 my_dict = {
     "name": "amamov",
     "age": 23,
@@ -43,6 +45,7 @@ for key, value in my_dict.items():
     print("key, value : ", key, value)
 
 ## set
+print("set 순회")
 my_set = set((2, 9, 3, 7, 1, 100, 1000))
 for i in my_set:
     print(i)

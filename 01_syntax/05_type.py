@@ -1,4 +1,4 @@
-# [Python의 데티터 타입 종류]
+# [Python의 기본적인 데이터 타입 종류]
 
 """
 Boolean
@@ -18,7 +18,7 @@ my_float = 3.14
 my_complex = complex(1, 2)
 my_list = [2, 3, 5, 7, 11]
 my_tuple = 1, 3, 5, 7
-my_set = {2, 4, 6, 8}
+my_set = set((2, 4, 6, 8))
 my_dict = {
     "name": "Yoon",
     "age": 23,
