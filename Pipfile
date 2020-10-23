@@ -10,6 +10,9 @@ black = "*"
 typing = "*"
 matlab = "*"
 matplotlib = "*"
+xlrd = "*"
+openpyxl = "*"
+pandas = "*"
 
 [requires]
 python_version = "3.8"
