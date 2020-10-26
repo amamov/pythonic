@@ -39,12 +39,3 @@ with open("./test_files/test2.txt", "w") as f:
 # [추가]
 with open("./test_files/test2.txt", "a") as file:
     file.write("wow!! 파일에 추가하였다!!")
-
-
-# [json 파일 만들기]
-import json
-
-dic = {"name": "joy", "2": "2"}
-
-with open("./test_files/test.json", "w", encoding="utf-8") as file:
-    json.dump(dic, file, indent="\t")
