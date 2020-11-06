@@ -1,7 +1,7 @@
 def fibonacci(size_of_fibonacci: int) -> list:
     first, second = 0, 1
     fibonacci_seq = [first, second]
-    for loop in range(size_of_fibonacci - 2):
+    for _ in range(size_of_fibonacci - 2):
         first, second = second, first + second
         fibonacci_seq.append(second)
     return fibonacci_seq
