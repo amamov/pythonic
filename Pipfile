@@ -15,6 +15,13 @@ xlrd = "*"
 openpyxl = "*"
 pandas = "*"
 pygame = "*"
+lxml = "*"
+requests = "*"
+beautifulsoup4 = "*"
+fake-useragent = "*"
+flask = "*"
+pyqt5 = "*"
+selenium = "*"
 
 [requires]
 python_version = "3.8"

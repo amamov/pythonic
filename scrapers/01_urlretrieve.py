@@ -8,8 +8,8 @@ img_url = "https://zmdzmd.net/wp-content/uploads/2020/03/%EC%A1%B0%EC%9D%B4-%EA%
 html_url = "https://www.google.co.kr/"
 
 # 다운받을 경로
-save_img_path = str(BASE_DIR / "test_download_files" / "joy.gif")
-save_html_path = str(BASE_DIR / "test_download_files" / "index.html")
+save_img_path = str(BASE_DIR / "files" / "joy.gif")
+save_html_path = str(BASE_DIR / "files" / "index.html")
 
 try:
     img_file, img_header = request.urlretrieve(img_url, save_img_path)

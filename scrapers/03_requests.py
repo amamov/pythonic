@@ -13,8 +13,6 @@ response = requests.get("https://www.google.com")
 
 # 세션 with 구문 안에서 유지 활성화 : 이 구문 안에서 session 동작을 진행할 수 있다.
 with requests.Session() as session:
-    session = requests.Session()
-
     # 쿠키 삽입
     jar = requests.cookies.RequestsCookieJar()
     jar.set("name", "amamov", domain="httpbin.org", path="/cookies")

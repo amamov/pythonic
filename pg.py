@@ -1,31 +1,18 @@
 """
     nodemon pg.py
 """
+x = int(input())
 
 
-def check_group_word(word: str) -> bool:
-    is_group_word = True
-    _word = []
-    for idx in range(len(word)):
-        if word[idx] in _word:
-            is_group_word = False
-        if idx + 1 < len(word) and word[idx] != word[idx + 1]:
-            _word.append(word[idx])
-    return is_group_word
+def find_fraction(x: int) -> str:
+    a, n = 1, 1
+    while a < x:
+        a += n + 1
+        n += 1
+    if n % 2 == 0:
+        print(n - a + x, "/", a - x + 1, sep="")
+    elif n % 2 != 0:
+        print(a - x + 1, "/", n - a + x, sep="")
 
 
-T = int(input())
-words = []
-count = 0
-for i in range(T):
-    word = input()
-    words.append(word)
-for word in words:
-    if check_group_word(word):
-        count += 1
-print(count)
-
-assert check_group_word("happy") == True
-assert check_group_word("new") == True
-assert check_group_word("aba") == False
-assert check_group_word("abcabc") == False
+find_fraction(x)

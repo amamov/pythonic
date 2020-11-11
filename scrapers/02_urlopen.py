@@ -6,8 +6,8 @@ BASE_DIR = Path(__file__).resolve().parent
 
 # 다운로드 경로 및 파일명
 save_path = {
-    "image": str(BASE_DIR / "test_download_files" / "joy2.gif"),
-    "html": str(BASE_DIR / "test_download_files" / "google.html"),
+    "image": str(BASE_DIR / "files" / "joy2.gif"),
+    "html": str(BASE_DIR / "files" / "google.html"),
 }
 
 # 다운로드 테겟
