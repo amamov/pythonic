@@ -16,8 +16,8 @@ y = 10
 _y = 10
 print(type(x))  # <class 'float'>
 print(type(y))  # <class 'int'>
-print(x == y)  # True
-print(x is y)  # False
+print(x == y)  # True : 객체의 값을 비교한다.
+print(x is y)  # False : 객체의 주소를 비교한다.
 print(y is _y)  # True
 
 # 수치 연산 함수

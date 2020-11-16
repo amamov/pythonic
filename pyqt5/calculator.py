@@ -15,6 +15,8 @@ class MainDialog(QDialog):
     def __init__(self):
         super().__init__()
         uic.loadUi(UI_PATH, self)
+
+        # 숫자 버튼 제어
         num_buttons = [
             self.num_pushButton_1,
             self.num_pushButton_2,
@@ -25,7 +27,11 @@ class MainDialog(QDialog):
             self.num_pushButton_7,
             self.num_pushButton_8,
             self.num_pushButton_9,
-            self.num_pushButton_0,
+            self.num_pushButton_dot,
+            self.sign_pushButton_plus,
+            self.sign_pushButton_minus,
+            self.sign_pushButton_mul,
+            self.sign_pushButton_div,
         ]
         for button in num_buttons:
             button.clicked.connect(
@@ -33,9 +39,7 @@ class MainDialog(QDialog):
             )  # 이벤트 리스너 연결
 
     def num_clicked(self, state, button):
-
-        """ button의 클릭 이벤트 """
-
+        # 버튼에 따라 계산하기 알고리즘 짜기
         current_line_text = self.q_lineEdit.text()  # 현재 데이터
         updated_line_text = current_line_text + button.text()  # 업데이트된 데이터
         self.q_lineEdit.setText(updated_line_text)
