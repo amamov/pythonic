@@ -1,11 +1,16 @@
 """
     nodemon pg.py
 """
-l1 = [1, 2, 3]
-l2 = [1, 2, 3]
-l3 = l1
-l4 = l3
-l5 = l4
-l6 = l5
 
-print(l6 is l1)
+
+def check_expression(n: str) -> str:
+    pass
+
+
+cal1 = "1+2+3"
+cal2 = "1+2*3"
+cal3 = "1+((2))"
+cal4 = "1+((2"
+cal5 = ""
+
+print(eval(check_expression(cal1)))
