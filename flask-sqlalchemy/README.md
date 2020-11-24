@@ -83,11 +83,7 @@ db.session.commit()
 # User.query.filter(User.id == uid).first() ===  User.query.get(uid)
 
 uid = 1 # 제거 대상 객체의 id를 알고 있다고 하자.
-a = User.query.filter(User.id == uid).delete()
-db.session.commit()
-
-b = User.query.get(2)
-db.session.delete(b)
+a = User.query.get(uid).delete()
 db.session.commit()
 ```
 
