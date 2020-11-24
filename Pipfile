@@ -8,9 +8,6 @@ black = "*"
 flake8 = "*"
 
 [packages]
-typing = "*"
-matlab = "*"
-matplotlib = "*"
 xlrd = "*"
 openpyxl = "*"
 pandas = "*"
@@ -22,6 +19,7 @@ fake-useragent = "*"
 flask = "*"
 pyqt5 = "*"
 selenium = "*"
+flask-sqlalchemy = "*"
 
 [requires]
 python_version = "3.8"

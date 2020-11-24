@@ -2,4 +2,4 @@ from flask_sqlalchemy import SQLAlchemy
 
 db = SQLAlchemy()
 
-from . import model1
+from . import users
