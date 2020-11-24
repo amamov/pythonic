@@ -4,7 +4,7 @@
 <br>
 <br>
 
-## CRUD
+# CRUD
 
 ```python
 class User(db.Model):
@@ -95,7 +95,7 @@ db.session.commit()
 <br>
 <br>
 
-## Query
+# Query
 
 ### 1. filter
 ```python
@@ -204,7 +204,7 @@ User.query.limit(3).all()
 <br>
 ---
 
-## Relationship
+# Relationship
 
      - 테이블 간에는 관계를 맺을 수 있으며 대표적으로 1:N(one-to-many), N:N(Many-to-many), 1:1(one-to-one) 관계이다.
 <br>
