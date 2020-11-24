@@ -10,6 +10,7 @@ class User(db.Model):
 ```
 <br>
 <br>
+
 ## CRUD
 
 1. Create
@@ -83,6 +84,7 @@ db.session.commit()
 ---
 <br>
 <br>
+
 ## Query
 
 ### 1. filter
@@ -197,6 +199,7 @@ User.query.limit(3).all()
      - 테이블 간에는 관계를 맺을 수 있으며 대표적으로 1:N(one-to-many), N:N(Many-to-many), 1:1(one-to-one) 관계이다.
 <br>
 <br>
+
 ### 1. one-to-many
 
     - 유저와 게시판 사이의 관계
@@ -273,6 +276,7 @@ amamov.boards.all()
 ```
 <br>
 <br>
+
 ### 2. many-to-many
 
     - 게시판과 태그의 관계
