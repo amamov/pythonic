@@ -83,12 +83,15 @@ db.session.commit()
 
 ## Query
 
+1. filter
 ```python
 User.query.filter(User.id != 1).all()
 ```
 
 - User table의 객체들중 id가 1이 아닌 모든 객체들을 리스트로 가져온다.
-
+<br>
+<br>
+<br>
 ```python
 User.query.filter(User.email.like("%gmail%")).all()
 ```
