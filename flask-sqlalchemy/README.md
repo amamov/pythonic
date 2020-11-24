@@ -1,5 +1,11 @@
 # flask-sqlalchemy
 
+
+<br>
+<br>
+
+## CRUD
+
 ```python
 class User(db.Model):
     __tablename__ = "amamov_user"
@@ -10,8 +16,6 @@ class User(db.Model):
 ```
 <br>
 <br>
-
-## CRUD
 
 1. Create
 
