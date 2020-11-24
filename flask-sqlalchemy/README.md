@@ -83,58 +83,80 @@ db.session.commit()
 
 ## Query
 
-### 1. User.query.filter(User.id != 1).all()
+```python
+User.query.filter(User.id != 1).all()
+```
 
 - User table의 객체들중 id가 1이 아닌 모든 객체들을 리스트로 가져온다.
 
-### 2. User.query.filter(User.email.like("%gmail%")).all()
+```python
+User.query.filter(User.email.like("%gmail%")).all()
+```
 
 - User table의 객체들중 email에 gmail이라는 단어(문자열)이 존재하는 모든 객체들을 리스트로 가져온다.
 
-### 3. User.query.filter(User.username.in\_(['spring', 'fall', 'amamov'])).all()
+```python
+User.query.filter(User.username.in\_(['spring', 'fall', 'amamov'])).all()
+```
 
 - User table의 객체들중 ['spring', 'fall', 'amamov']에 속하는 username인 객체들을 모두 리스트로 가져온다.
 
-### 4. User.query.filter(~User.username.in\_(['spring', 'fall', 'amamov'])).all()
+```python
+User.query.filter(~User.username.in\_(['spring', 'fall', 'amamov'])).all()
+```
 
 - User table의 객체들중 ['spring', 'fall', 'amamov']에 속하지 않는 username인 객체들을 모두 리스트로 가져온다.
 
-### 5. User.query.filter(User.email == None).all()
+```python
+User.query.filter(User.email == None).all()
+```
 
-    - User table의 객체들중 email 이 없는 객체들을 모두 리스트로 가져온다.
+- User table의 객체들중 email 이 없는 객체들을 모두 리스트로 가져온다.
 
-### 6. User.query.filter(db.and\_(User.username.like('%s%), User.email.like('%gmail%))).all()
+```python
+User.query.filter(db.and\_(User.username.like('%s%), User.email.like('%gmail%))).all()
+```
 
-    - User table의 객체들중 username에 s가 들어가고 email에 gmail이 들어가는 모든 객체를 리스트로 가져온다.
-    - User.query.filter(User.username.like('%s%')).filter(User.email.like('%gmail%')).all() 과 같다.
+- User table의 객체들중 username에 s가 들어가고 email에 gmail이 들어가는 모든 객체를 리스트로 가져온다.
+- User.query.filter(User.username.like('%s%')).filter(User.email.like('%gmail%')).all() 과 같다.
 
-### 7. User.query.filter(db.or\_(User.username.like('%s%), User.email.like('%gmail%))).all()
+```python
+User.query.filter(db.or\_(User.username.like('%s%), User.email.like('%gmail%))).all()
+```
 
-    - User table의 객체들중 username에 s가 들어가거나 또는 email에 gmail이 들어가는 모든 객체를 리스트로 가져온다.
+- User table의 객체들중 username에 s가 들어가거나 또는 email에 gmail이 들어가는 모든 객체를 리스트로 가져온다.
 
-### 8. User.query.order_by(User.username).all()
+```python
+User.query.order_by(User.username).all()
+```
 
-    - User table의 객체들을 username 오름차순으로 정렬하여 리스트로 모두 가져온다.
-    - User.query.filter(...).order_by(...) 으로 주로 사용
-    - 오름차순이란 작은 것부터 큰 순서로 정렬하는 방식이다.
-    - abcdef.., 12345...
-    - 내림차순으로 정렬하고 싶다면 User.query.order_by(User.username.desc()).all()로 사용한다.
+- User table의 객체들을 username 오름차순으로 정렬하여 리스트로 모두 가져온다.
+- User.query.filter(...).order_by(...) 으로 주로 사용
+- 오름차순이란 작은 것부터 큰 순서로 정렬하는 방식이다.
+- abcdef.., 12345...
+- 내림차순으로 정렬하고 싶다면 User.query.order_by(User.username.desc()).all()로 사용한다.
 
-### 9. User.query.limit(3).all()
+```python
+User.query.limit(3).all()
+```
 
-    - User table의 객체들을 3개만 리스트로 모두 가져온다.
-    - User.query.filter(...).limit(...) 으로 주로 사용
+- User table의 객체들을 3개만 리스트로 모두 가져온다.
+- User.query.filter(...).limit(...) 으로 주로 사용
 
-### 10. User.query.offset(3).all()
+```python
+ User.query.offset(3).all()
+ # 만약 User.query.all()이 [<User 'spring'>, <User 'amamov'>, <User 'fall'>, <User 'joy'>, <User 'yua'>]라면 [<User 'joy'>, <User 'yua'>]만 가져온다.
+```
 
-    - User table의 객체들중 3개를 건너뛰고 나머지를 리스트로 모두 가져온다.
-    - User.query.filter(...).offset(...) 으로 주로 사용
-    - 만약 User.query.all()이 [<User 'spring'>, <User 'amamov'>, <User 'fall'>, <User 'joy'>, <User 'yua'>]라면 [<User 'joy'>, <User 'yua'>]만 가져온다.
-    - limit와 같이 써서 pagination을 구현할 수 있다.
+- User table의 객체들중 3개를 건너뛰고 나머지를 리스트로 모두 가져온다.
+- User.query.filter(...).offset(...) 으로 주로 사용
+- limit와 같이 써서 pagination을 구현할 수 있다.
 
-### 11. User.query.filter(User.password == password).count()
+```python
+ User.query.filter(User.password == password).count()
+```
 
-    - User table의 객체들중 조건에 성립하는 객체 수를 반환한다.
+- User table의 객체들중 조건에 성립하는 객체 수를 반환한다.
 
 ---
 
