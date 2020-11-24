@@ -17,7 +17,7 @@ class User(db.Model):
 <br>
 <br>
 
-1. Create
+### 1. Create
 
 ```python
 amamov = User(username='yss', email='ysangsuk78@gmail.com') # user 객체 생성
@@ -32,8 +32,10 @@ db.session.commit()
 db.session.add_all([spring, summer, tokyo, seoul]) # 리스트로 한 번에 add
 db.session.commit()
 ```
+<br>
+<br>
 
-2. Read
+### 2. Read
 
 ```python
 ## User table의 모든 객체를 list 형태로 가져온다.
@@ -43,8 +45,10 @@ User.query.all()
 ## User table의 username이 tokyo인 객체들중 첫 번째 데이터을 가져온다.
 User.query.filter(User.username=='tokyo').first()
 ```
+<br>
+<br>
 
-3. Update
+### 3. Update
 
 ```python
 ## 방법 1
@@ -70,8 +74,10 @@ updated_data={'email': 'email@amamovamamov'}
 a = User.query.filter(User.id==uid).update(updated_data)
 db.session.commit(a)
 ```
+<br>
+<br>
 
-4. Delete
+### 4. Delete
 
 ```python
 # User.query.filter(User.id == uid).first() ===  User.query.get(uid)
