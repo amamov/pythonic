@@ -52,29 +52,29 @@ User.query.filter(User.username=='tokyo').first()
 
 ### 3. Update
 
+- 방법 1
 ```python
-## 방법 1
-t = User.query.filter(User.username=='tokyo').first()
+tokyo = User.query.filter(User.username=='tokyo').first()
 
-print(t.email)
+print(tokyo.email)
 # 'email@tokyo'
 
 ## 값 수정
-t.email = 'email@ttt'
+tokyo.email = 'email@ttt'
 db.session.commit()
 
 ## 업데이트 확인
 print(t.email)
 # 'email@ttt'
+```
 
-## 방법 2
-uid = 1 # 업데이트 대상 객체의 id를 알고 있다고 하자.
-
+- 방법 2
+```python
+# username이 amamov의 email을 업데리이트(수정)한다고 하자.
 updated_data={'email': 'email@amamovamamov'}
 
-# User.id 가 uid인 객체를 업데이트한다.
-a = User.query.filter(User.id==uid).update(updated_data)
-db.session.commit(a)
+a = User.query.filter(User.username == 'amamov').update(updated_data)
+db.session.commit()
 ```
 
 <br>
@@ -86,11 +86,7 @@ db.session.commit(a)
 # User.query.filter(User.id == uid).first() ===  User.query.get(uid)
 
 uid = 1 # 제거 대상 객체의 id를 알고 있다고 하자.
-a = User.query.filter(User.id == uid).delete()
-db.session.commit()
-
-b = User.query.get(2)
-db.session.delete(b)
+a = User.query.get(uid).delete()
 db.session.commit()
 ```
 
