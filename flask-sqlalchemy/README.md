@@ -53,6 +53,7 @@ User.query.filter(User.username=='tokyo').first()
 ### 3. Update
 
 - 방법 1
+
 ```python
 tokyo = User.query.filter(User.username=='tokyo').first()
 
@@ -69,6 +70,7 @@ print(t.email)
 ```
 
 - 방법 2
+
 ```python
 # username이 amamov의 email을 업데리이트(수정)한다고 하자.
 updated_data={'email': 'email@amamovamamov'}
