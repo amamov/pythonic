@@ -1,16 +1,9 @@
 """
     nodemon pg.py
 """
+total = 1
 
+for i in range(1, 30):
+    total = i * total
 
-def check_expression(n: str) -> str:
-    pass
-
-
-cal1 = "1+2+3"
-cal2 = "1+2*3"
-cal3 = "1+((2))"
-cal4 = "1+((2"
-cal5 = ""
-
-print(eval(check_expression(cal1)))
+print((4 * total + 120) % 31)
