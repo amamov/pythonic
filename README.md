@@ -23,6 +23,7 @@ Python 언어에 대한 고찰 & 기본 문법 & 성능 최적화
 
 4. 가상환경 pipenv 설치
 
+   - [pipenv 대신, conda 가상환경 사용하기](https://amamov.tistory.com/63?category=867503)
    - \$ pip3 install pipenv
    - \$ pip3 install pipenv --upgrade
    - pipenv 명령어 : https://pipenv.pypa.io/en/latest/cli/#cmdoption-pipenv-rm
@@ -66,17 +67,4 @@ Python 언어에 대한 고찰 & 기본 문법 & 성능 최적화
    - \$ pipenv --where : Output project home information.
    - \$ pipenv graph : 프로젝트에 설치된 패키지들을 트리 구조로 시각화하여 보여준다.
    - \$ pipenv check : 보안 취약점이 있는 패키지가 설치되어 있는지 간단하게 체크 가능
-
-#### 코드 실행 시간 측정
-
-```
-import time
-
-start = time.time()  # 시작 시간 저장
-
-
-# 작업 코드
-
-
-print("time :", time.time() - start)
-```
+   - \$ pipenv --rm : 가상환경 제거
