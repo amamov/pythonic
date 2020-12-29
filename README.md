@@ -2,17 +2,27 @@
 
 👻 Python 언어에 대한 고찰 & 기본 문법 & 가상환경 & 라이브러리 👻
 
-# Python Set Up - for mac OS
+<br>
 
-1. homebrew 섩치 --> 구글에서 쉽게 다운받을 수 있다.
+# Python Set Up - for Mac OS
+
+- _*Python과 pip을 설치하는 방법 외에는 Window OS와 설치 방법은 같다.*_
+
+ <br>
+
+1. homebrew 설치 --> 구글에서 쉽게 다운받을 수 있다.
 
    - `$ brew -v` : brew 버전을 알 수 있다.
    - `$ brew update` : brew 설치
+
+<br>
 
 2. python 설치
 
    - `$ brew install python3`
    - `$ python3` : 설치를 확인할 수 있다.
+
+<br>
 
 3. pip 설치
 
@@ -25,31 +35,54 @@
    - `$ pip freeze > requirements.txt` : requirements.txt파일에 설치된 패키지를 출력한다.
    - `$ pip install -r requirements.txt` : requirements.txt파일에 기록된 패키지를 설치한다.
 
-4. 가상환경 pipenv 설치
+<br>
 
-   - [pipenv 대신, conda 가상환경 사용하기](https://github.com/amamov/Pythonic#conda-가상황경-설치하기-anaconda-with-jupyter-notebook)
-   - `$ pip install pipenv` : pipenv 설치
+4. 가상환경 설치 (conda, pipenv 둘 중 하나 선택)
+
+   -[conda 가상환경 사용하기](https://github.com/amamov/Pythonic#conda-가상황경-설치하기-anaconda-with-jupyter-notebook)
+
+   - pipenv 가상환경 사용하기 :`$ pip install pipenv` :
+
+<br>
 
 5. 프로젝트 폴더 만들기
 
-   - `$ cd documents`
-   - `$ mkdir my_project`
-   - `$ cd my_project`
-   - `$ pipenv --python 3.8` : 가상환경을 만든다.
-   - `$ pipenv shell` : 가상환경 안으로 들어간다.
+   1. `$ cd documents` (터미널을 열고 입력) : documents 폴더 안으로 들어간다.
+   2. `$ mkdir my_project` : my_project 폴더를 생성한다.
+   3. `$ cd my_project` : my_project 폴더 안으로 들어간다.
 
-6. vs-code에서 flake8 선택 & 설치
+<br>
 
-   - linter은 작성한 코드에 에러가 생길 부분을 미리 감지한다.
-   - shift + command + p --> python : select linter --> flake8 선택&설치 --> 해당 폴더에 .vscode 폴더가 생성된 것을 확인할 수 있다.
-   - 해당 폴더에 .vscode 폴더가 생성된 것을 확인할 수 있다.
+6. 가상 환경 만들고 들어가기
 
-7. formatter-black
+   - pipenv 사용
+     1. `$ pipenv --python 3.8` : 가상환경을 만든다.
+     2. `$ pipenv shell` : 가상환경 안으로 들어간다.
+   - conda 사용
+     1. `$ conda create --name 가상환경이름 python=파이썬버전` : 가상환경을 만든다.
+     2. `$ conda activate 가상환경이름` : 가상환경 안으로 들어간다.
 
-   - formatter은 코드를 보기좋게 format해준다.
-   - `$ pipenv install black --dev --pre`
+<br>
 
-8. .vscode안에 settings.json파일을 다음과 같이 수정한다.
+7. vs-code에서 interpreter & linter 선택 & 설치
+
+   - `shift + command + p` --> `python : select interpreter` --> 생성한 가상환경 선택
+   - `shift + command + p` --> `python : select linter` --> flake8 선택&설치
+     - linter은 작성한 코드에 에러가 생길 부분을 미리 감지한다.
+     - 해당 폴더에 .vscode 폴더가 생성된 것을 확인할 수 있다.
+
+<br>
+
+8. formatter-black : - 코드를 보기좋게 format해준다
+
+   - pipenv 사용
+     - `$ pipenv install black --dev --pre`
+   - conda 사용
+     - `$ pip install black --dev --pre`
+
+<br>
+
+9. .vscode안에 settings.json파일을 다음과 같이 수정한다.
 
    ```
    {
@@ -61,21 +94,24 @@
    }
    ```
 
-9. pipenv 명령어
+<br>
 
-   - `$ pip install pipenv` : pipenv 설치
-   - `$ pip install pipenv --upgrade` : pipenv 업그레이드
-   - `$ pipenv --python 3.8` : 가상환경을 만든다.
-   - `$ pipenv shell` : 가상환경 안으로 들어간다.
-   - `$ pipenv run python3 my_code.py` : 가상환경에서 코드 실행하기
-   - `$ alias prp="pipenv run python3"` : 코드 단축어 별칭
-   - `$ pipenv install` : 협업 프로젝트를 할때, 프로젝트의 모든 개발자들은 Git 저장소에 올려둔 Pipfile 파일과 Pipfile.lock 파일을 내려받은 후에 pipenv install 커맨드로 모든 패키지를 한 번에 설치할 수 있다.
-   - `$ pipenv graph` : 프로젝트에 설치된 패키지들을 트리 구조로 시각화하여 보여준다.
-   - `$ pipenv --where` : Output project home information.
-   - `$ pipenv check` : 보안 취약점이 있는 패키지가 설치되어 있는지 간단하게 체크 가능
-   - `$ pipenv --rm` : 가상환경 제거
-   - [pipenv 명령어 공식 문서](https://pipenv.pypa.io/en/latest/cli/#cmdoption-pipenv-rm)
+- pipenv 명령어 정리
 
+  - `$ pip install pipenv` : pipenv 설치
+  - `$ pip install pipenv --upgrade` : pipenv 업그레이드
+  - `$ pipenv --python 3.8` : 가상환경을 만든다.
+  - `$ pipenv shell` : 가상환경 안으로 들어간다.
+  - `$ pipenv run python3 my_code.py` : 가상환경에서 코드 실행하기
+  - `$ alias prp="pipenv run python3"` : 코드 단축어 별칭
+  - `$ pipenv install` : 협업 프로젝트를 할때, 프로젝트의 모든 개발자들은 Git 저장소에 올려둔 Pipfile 파일과 Pipfile.lock 파일을 내려받은 후에 pipenv install 커맨드로 모든 패키지를 한 번에 설치할 수 있다.
+  - `$ pipenv graph` : 프로젝트에 설치된 패키지들을 트리 구조로 시각화하여 보여준다.
+  - `$ pipenv --where` : Output project home information.
+  - `$ pipenv check` : 보안 취약점이 있는 패키지가 설치되어 있는지 간단하게 체크 가능
+  - `$ pipenv --rm` : 가상환경 제거
+  - [pipenv 명령어 공식 문서](https://pipenv.pypa.io/en/latest/cli/#cmdoption-pipenv-rm)
+
+<br>
 <br>
 
 ---
