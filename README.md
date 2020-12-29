@@ -2,7 +2,7 @@
 
 Python 언어에 대한 고찰 & 기본 문법 & 성능 최적화
 
-## Python Set Up - for mac OS
+# Python Set Up - for mac OS
 
 1. homebrew 섩치 --> 구글에서 쉽게 다운받을 수 있다.
 
@@ -75,7 +75,7 @@ Python 언어에 대한 고찰 & 기본 문법 & 성능 최적화
 
 <br>
 
-## conda 가상황경 설치하기 (Anaconda with Jupyter Notebook)
+# conda 가상황경 설치하기 (Anaconda with Jupyter Notebook)
 
 ### Anaconda
 
