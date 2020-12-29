@@ -77,11 +77,11 @@ Python 언어에 대한 고찰 & 기본 문법 & 성능 최적화
 
 ## conda 가상황경 설치하기 (Anaconda with Jupyter Notebook)
 
-#### Anaconda
+### Anaconda
 
 아나콘다(Anaconda)는 파이썬 배포판으로 과학적 컴퓨팅과 데이터 사이언스를 위한 수많은 파이썬의 패키지를 포함하고 있다.
 
-#### Jupyter Notebook
+### Jupyter Notebook
 
 Jupyter Notebook은 오픈 소스 web API으로 라이브 코드, 시각화와 설명을 위한 텍스트 등을 포함한 문서를 만들고 공유하도록 할 수 있다. 주로 데이터 클리닝과 변형, 수치 시뮬레이션 통계 모델링, 머신 러닝 등에 사용할 수 있다.
 
@@ -99,7 +99,7 @@ Jupyter Notebook은 Python, R 등 데이터 과학 분야와 관련된 여러 �
 
 <br>
 
-#### Anaconda 설치
+### Anaconda 설치
 
 1. Anaconda를 설치한다. [링크](https://www.anaconda.com/download/)
 
@@ -112,7 +112,7 @@ Jupyter Notebook은 Python, R 등 데이터 과학 분야와 관련된 여러 �
 <br>
 <br>
 
-#### Anaconda 가상환경 만들기
+### Anaconda 가상환경 만들기
 
 가상환경이란 한 컴퓨터에서 여러 프로젝트를 작업할 때 파이썬 패키지의 의존성이 충돌하지 않도록 관리해주는 툴이다. 가상환경을 생성하면 환경변수 그룹이 만들어지고 그룹마다 지정된 경로에 패키지를 설치하고 참고하게 된다. 여러 프로젝트를 개발할 때 가상환경을 사용하면 패키지(라이브러리)의 버전 관리가 용이해진다.
 
