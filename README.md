@@ -1,40 +1,42 @@
 # Pythonic - 파이썬스럽다
 
-Python 언어에 대한 고찰 & 기본 문법 & 성능 최적화
+👻 Python 언어에 대한 고찰 & 기본 문법 & 가상환경 & 라이브러리 👻
 
 # Python Set Up - for mac OS
 
 1. homebrew 섩치 --> 구글에서 쉽게 다운받을 수 있다.
 
-   - \$ brew -v : brew 버전을 알 수 있다.
-   - \$ brew update : brew 설치
+   - `$ brew -v` : brew 버전을 알 수 있다.
+   - `$ brew update` : brew 설치
 
 2. python 설치
 
-   - \$ brew install python3
-   - \$ python3 : 설치를 확인할 수 있다.
+   - `$ brew install python3`
+   - `$ python3` : 설치를 확인할 수 있다.
 
 3. pip 설치
 
-   - \$ sudo easy_install pip
-   - \$ pip3 install pip --upgrade
-   - \$ pip3 --version
-   - \$ pip3 freeze : 설치된 패키지를 확인할 수 있다.
+   - `$ sudo easy_install pip` : pip을 설치한다.
+   - `$ pip install pip --upgrade` : pip 업그레이드
+   - `$ pip --version` : pip 버전 확인
+   - `$ pip install 패키지` : 패키지를 설치한다.
+   - `$ pip install "패키지~=3.0.0"` : 3.0.0 버전의 패키지를 설치한다.
+   - `$ pip freeze` : 설치된 패키지를 확인할 수 있다.
+   - `$ pip freeze > requirements.txt` : requirements.txt파일에 설치된 패키지를 출력한다.
+   - `$ pip install -r requirements.txt` : requirements.txt파일에 기록된 패키지를 설치한다.
 
 4. 가상환경 pipenv 설치
 
    - [pipenv 대신, conda 가상환경 사용하기](https://github.com/amamov/Pythonic#conda-가상황경-설치하기-anaconda-with-jupyter-notebook)
-   - \$ pip3 install pipenv
-   - \$ pip3 install pipenv --upgrade
-   - pipenv 명령어 : https://pipenv.pypa.io/en/latest/cli/#cmdoption-pipenv-rm
+   - `$ pip install pipenv` : pipenv 설치
 
 5. 프로젝트 폴더 만들기
 
-   - \$ cd documents
-   - \$ mkdir my_project
-   - \$ cd my_project
-   - \$ pipenv --python 3.8 : 가상환경을 만든다.
-   - \$ pipenv shell : 가상환경 안으로 들어간다.
+   - `$ cd documents`
+   - `$ mkdir my_project`
+   - `$ cd my_project`
+   - `$ pipenv --python 3.8` : 가상환경을 만든다.
+   - `$ pipenv shell` : 가상환경 안으로 들어간다.
 
 6. vs-code에서 flake8 선택 & 설치
 
@@ -45,7 +47,7 @@ Python 언어에 대한 고찰 & 기본 문법 & 성능 최적화
 7. formatter-black
 
    - formatter은 코드를 보기좋게 format해준다.
-   - \$ pipenv install black --dev --pre
+   - `$ pipenv install black --dev --pre`
 
 8. .vscode안에 settings.json파일을 다음과 같이 수정한다.
 
@@ -61,13 +63,18 @@ Python 언어에 대한 고찰 & 기본 문법 & 성능 최적화
 
 9. pipenv 명령어
 
-   - \$ pipenv run python3 my_code.py : 가상환경에서 코드 실행하기
-   - \$ alias prp="pipenv run python3" : 코드 단축어 별칭
-   - \$ pipenv install : 협업 프로젝트를 할때, 프로젝트의 모든 개발자들은 Git 저장소에 올려둔 Pipfile 파일과 Pipfile.lock 파일을 내려받은 후에 pipenv install 커맨드로 모든 패키지를 한 번에 설치할 수 있다.
-   - \$ pipenv --where : Output project home information.
-   - \$ pipenv graph : 프로젝트에 설치된 패키지들을 트리 구조로 시각화하여 보여준다.
-   - \$ pipenv check : 보안 취약점이 있는 패키지가 설치되어 있는지 간단하게 체크 가능
-   - \$ pipenv --rm : 가상환경 제거
+   - `$ pip install pipenv` : pipenv 설치
+   - `$ pip install pipenv --upgrade` : pipenv 업그레이드
+   - `$ pipenv --python 3.8` : 가상환경을 만든다.
+   - `$ pipenv shell` : 가상환경 안으로 들어간다.
+   - `$ pipenv run python3 my_code.py` : 가상환경에서 코드 실행하기
+   - `$ alias prp="pipenv run python3"` : 코드 단축어 별칭
+   - `$ pipenv install` : 협업 프로젝트를 할때, 프로젝트의 모든 개발자들은 Git 저장소에 올려둔 Pipfile 파일과 Pipfile.lock 파일을 내려받은 후에 pipenv install 커맨드로 모든 패키지를 한 번에 설치할 수 있다.
+   - `$ pipenv graph` : 프로젝트에 설치된 패키지들을 트리 구조로 시각화하여 보여준다.
+   - `$ pipenv --where` : Output project home information.
+   - `$ pipenv check` : 보안 취약점이 있는 패키지가 설치되어 있는지 간단하게 체크 가능
+   - `$ pipenv --rm` : 가상환경 제거
+   - [pipenv 명령어 공식 문서](https://pipenv.pypa.io/en/latest/cli/#cmdoption-pipenv-rm)
 
 <br>
 
