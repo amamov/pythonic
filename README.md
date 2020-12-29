@@ -107,7 +107,7 @@ Jupyter Notebook은 Python, R 등 데이터 과학 분야와 관련된 여러 �
 
 3. 실행하고 Home에서 Jupyter Notebook을 선택한다.
 
-<img src="./%image_for_markdown/1.png" width="100%" alt="image" />
+<img src="./image_for_markdown/1.png" width="100%" alt="image" />
 
 <br>
 <br>
@@ -122,7 +122,7 @@ Jupyter Notebook은 Python, R 등 데이터 과학 분야와 관련된 여러 �
 
 1. `"command + 스페이스 바"`를 눌러서 `"Spotlight"`를 실행하고 Spotlight에 **`터미널`**을 검색하고 실행한다.
 
-<img src="./%image_for_markdown/2.png" width="100%" alt="image" />
+<img src="./image_for_markdown/2.png" width="100%" alt="image" />
 
 <br>
 <br>
@@ -144,7 +144,7 @@ $ conda create -n 가상환경이름
 
 예를들어, 만들고 싶은 가상환경이름이 test라면 `"conda create test"`라고 입력하면 된다.
 
-<img src="./%image_for_markdown/3.png" width="100%" alt="image" />
+<img src="./image_for_markdown/3.png" width="100%" alt="image" />
 
 <br>
 <br>
@@ -156,7 +156,7 @@ $ conda create -n 가상환경이름
 $ conda env list
 ```
 
-<img src="./%image_for_markdown/4.png" width="100%" alt="image" />
+<img src="./image_for_markdown/4.png" width="100%" alt="image" />
 
 <br>
 <br>
@@ -168,7 +168,7 @@ $ conda env list
 $ conda activate 들어가고 싶은 가상환경 이름
 ```
 
-<img src="./%image_for_markdown/5.png" width="100%" alt="image" />
+<img src="./image_for_markdown/5.png" width="100%" alt="image" />
 
 <br>
 <br>
@@ -180,7 +180,7 @@ $ conda activate 들어가고 싶은 가상환경 이름
 $ conda install 설치할 라이브러리
 ```
 
-<img src="./%image_for_markdown/6.png" width="100%" alt="image" />
+<img src="./image_for_markdown/6.png" width="100%" alt="image" />
 
 <br>
 <br>
@@ -196,7 +196,7 @@ $ conda list
 
 8. `python -m ipykernel install --user--name 가상환경이름 --display-name "[가상환경이름]"`라는 명령어를 이용하자. 이 명령어의 의미는 '주피터 노트북에서 커널을 선택해서 사용할 때 표시될 커널의 가상환경 이름을 `[가상환경이름]`으로 정하자'라는 것이다. 이것은 나중에 주피터 노트북을 열어서 사용할 때 확인할 수 있다. 이렇게 하면 주피터 노트북의 커널 연동까지 성공한 것이다.
 
-<img src="./%image_for_markdown/7.png" width="100%" alt="image" />
+<img src="./image_for_markdown/7.png" width="100%" alt="image" />
 
 ```cpp
 $ python -m ipykernel install --user --name 가상환경이름 --display-name "[가상환경이름]"
@@ -219,7 +219,7 @@ $ conda deactivate
 $ jupyter notebook
 ```
 
-<img src="./%image_for_markdown/8.png" width="100%" alt="image" />
+<img src="./image_for_markdown/8.png" width="100%" alt="image" />
 
 우측 상단의 new를 클릭하면 앞으로 사용하고자 하는 가상환경이 있는 것을 확인할 수 있다. 해당 커널을 통해서 특정 작업을 수행할 수 있다.
 <br>
