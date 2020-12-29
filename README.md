@@ -10,38 +10,46 @@
 
  <br>
 
-1. homebrew 설치 --> 구글에서 쉽게 다운받을 수 있다.
+1. homebrew 설치
 
-   - `$ brew -v` : brew 버전을 알 수 있다.
-   - `$ brew update` : brew 설치
+   - [homebrew 공식 사이트에서 설치](https://brew.sh/index_ko)
+   - homebrew 명령어 정리
+     - `$ brew -v` : brew 버전을 알 수 있다.
+     - `$ brew update` : brew 설치
 
 <br>
 
 2. python 설치
 
-   - `$ brew install python3`
-   - `$ python3` : 설치를 확인할 수 있다.
+   1. `$ brew install python3`
+
+   2. `$ python3` : 설치된 파이썬 명령 쉘을 실행한다.
+      - 설치 확인
+      - `exit()`으로 나올 수 있다.
 
 <br>
 
 3. pip 설치
 
-   - `$ sudo easy_install pip` : pip을 설치한다.
-   - `$ pip install pip --upgrade` : pip 업그레이드
-   - `$ pip --version` : pip 버전 확인
-   - `$ pip install 패키지` : 패키지를 설치한다.
-   - `$ pip install "패키지~=3.0.0"` : 3.0.0 버전의 패키지를 설치한다.
-   - `$ pip freeze` : 설치된 패키지를 확인할 수 있다.
-   - `$ pip freeze > requirements.txt` : requirements.txt파일에 설치된 패키지를 출력한다.
-   - `$ pip install -r requirements.txt` : requirements.txt파일에 기록된 패키지를 설치한다.
+   1. `$ sudo easy_install pip` : pip을 설치한다.
+   2. `$ pip --version` : 설치된 pip 버전을 확인할 수 있다.
+
+   - pip 명령어 정리
+     - `$ pip install pip --upgrade` : pip 업그레이드
+     - `$ pip install "패키지~=3.0.0"` : 3.0.0 버전의 패키지를 설치한다.
+     - `$ pip install 패키지` : 패키지를 설치한다.
+     - `$ pip --version` : 설치된 pip 버전을 확인할 수 있다.
+     - `$ pip freeze` : 설치된 패키지를 확인할 수 있다.
+     - `$ pip freeze > requirements.txt` : requirements.txt파일에 설치된 패키지를 출력한다.
+     - `$ pip install -r requirements.txt` : requirements.txt파일에 기록된 패키지를 설치한다.
 
 <br>
 
 4. 가상환경 설치 (conda, pipenv 둘 중 하나 선택)
 
-   -[conda 가상환경 사용하기](https://github.com/amamov/Pythonic#conda-가상황경-설치하기-anaconda-with-jupyter-notebook)
+   - [conda 가상환경 사용하기](https://github.com/amamov/Pythonic#conda-가상황경-설치하기-anaconda-with-jupyter-notebook)
 
-   - pipenv 가상환경 사용하기 :`$ pip install pipenv` :
+   - pipenv 가상환경 사용하기 :`$ pip install pipenv`
 
 <br>
 
@@ -53,7 +61,7 @@
 
 <br>
 
-6. 가상 환경 만들고 들어가기
+6. 가상환경 만들고 들어가기
 
    - pipenv 사용
      1. `$ pipenv --python 3.8` : 가상환경을 만든다.
@@ -66,10 +74,12 @@
 
 7. vs-code에서 interpreter & linter 선택 & 설치
 
-   - `shift + command + p` --> `python : select interpreter` --> 생성한 가상환경 선택
-   - `shift + command + p` --> `python : select linter` --> flake8 선택&설치
-     - linter은 작성한 코드에 에러가 생길 부분을 미리 감지한다.
-     - 해당 폴더에 .vscode 폴더가 생성된 것을 확인할 수 있다.
+   1. 생성한 `my_project` 폴더를 vs-code에서 연다.
+   2. `shift + command + p` --> `python : select interpreter` --> 생성한 가상환경 선택
+   3. `shift + command + p` --> `python : select linter` --> flake8 선택&설치
+
+   - linter은 작성한 코드에 에러가 생길 부분을 미리 감지한다.
+   - 해당 폴더에 .vscode 폴더가 생성된 것을 확인할 수 있다.
 
 <br>
 
