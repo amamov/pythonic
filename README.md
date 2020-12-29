@@ -23,7 +23,7 @@ Python 언어에 대한 고찰 & 기본 문법 & 성능 최적화
 
 4. 가상환경 pipenv 설치
 
-   - [pipenv 대신, conda 가상환경 사용하기](https://amamov.tistory.com/63?category=867503)
+   - [pipenv 대신, conda 가상환경 사용하기](https://github.com/amamov/Pythonic#conda-가상황경-설치하기-anaconda-with-jupyter-notebook)
    - \$ pip3 install pipenv
    - \$ pip3 install pipenv --upgrade
    - pipenv 명령어 : https://pipenv.pypa.io/en/latest/cli/#cmdoption-pipenv-rm
