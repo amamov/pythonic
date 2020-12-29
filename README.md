@@ -88,7 +88,7 @@
    - pipenv 사용
      - `$ pipenv install black --dev --pre`
    - conda 사용
-     - `$ pip install black --dev --pre`
+     - `$ pip install -U black`
 
 <br>
 
