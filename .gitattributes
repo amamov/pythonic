@@ -3,3 +3,6 @@
 
 # github에 통계에서 *.ipynb 을 제외한다.
 *.ipynb linguist-vendored
+
+*.html linguist-vendored
+*.css linguist-vendored
