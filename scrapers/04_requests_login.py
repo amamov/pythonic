@@ -1,4 +1,6 @@
 # 다나와 자동 로그인
+
+
 import requests
 from fake_useragent import UserAgent
 
@@ -10,7 +12,7 @@ login_info = {
     "redirectUrl": "http://www.danawa.com/",
     "loginMemberType": "general",
     "id": userid,
-    "isSaveId": "true",
+    "isSaveId": "false",
     "password": password,
 }
 
@@ -21,9 +23,7 @@ headers = {
 
 with requests.Session() as session:
     response = session.post(
-        "https://auth.danawa.com/login",
-        login_info,
-        headers=headers,
+        url="https://auth.danawa.com/login", data=login_info, headers=headers,
     )
 
     if not response.ok:
@@ -33,8 +33,7 @@ with requests.Session() as session:
     # print(response.text)
 
     response = session.get(
-        "https://buyer.danawa.com/order/Order/orderList",
-        headers=headers,
+        "https://buyer.danawa.com/order/Order/orderList", headers=headers,
     )
 
     # euc-kr (한글이 깨질경우)

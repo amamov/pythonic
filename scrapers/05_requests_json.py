@@ -5,7 +5,7 @@ import requests
 [용어 정리]
 유니코드(Unicode) : 전 세계의 모든 문자를 컴퓨터에서 일관되게 표현하고 다룰 수 있도록 설계된 산업 표준이다.
 UTF-8 : 유니코드를 위한 가변 길이 문자 인코딩 방식 중 하나이고 유니코드 한 문자를 나타내기 위해 1바이트에서 4바이트까지 사용한다.
-stream : 순서대로 물 흐르듯이 전송되는 데이터 Column
+stream : 순서대로 물 흐르듯이 전송되는 데이터 Column (text 타입을 직렬화한다.)
 encode : code화하다.
 decode : code를 원래 모습으로 바꾸다.
 """
@@ -30,6 +30,7 @@ def check_encoding(response):
 check_encoding(response_dics)
 check_encoding(response_list)
 
+# response_dics를 한 줄씩 json 형식으로 변환
 for line in response_dics.iter_lines(decode_unicode=True):
     # print(type(line)) # str
     # 한줄씩 JSON (DICT) 변환
