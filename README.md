@@ -2,9 +2,16 @@
 
 👻 Python 언어에 대한 고찰 & 기본 문법 & 가상환경 & 라이브러리 👻
 
+- [Python 설치](#python-설치)
+- [Python project set up in VSCode](#python-project-set-up-in-vscode)
+- [Python project set up in Pycharm](#python-project-set-up-in-pycharm)
+- [conda 가상환경 설치하기](#conda-가상환경-설치하기)
+
 <br>
 
-# Python Set Up - for Mac OS
+# Python 설치
+
+## Python Set Up - for Mac OS
 
 - _*Python과 pip을 설치하는 방법 외에는 Window OS와 설치 방법은 같다.*_
 
@@ -47,9 +54,24 @@
 
 4. 가상환경 설치 (conda, pipenv 둘 중 하나 선택)
 
-   - [conda 가상환경 사용하기](https://github.com/amamov/Pythonic#conda-가상황경-설치하기-anaconda-with-jupyter-notebook)
+   - [conda 가상환경 사용하기](#conda-가상환경-설치하기)
 
    - pipenv 가상환경 사용하기 :`$ pip install pipenv`
+
+     - pipenv 명령어 정리
+
+       - `$ pip install pipenv` : pipenv 설치
+       - `$ pip install pipenv --upgrade` : pipenv 업그레이드
+       - `$ pipenv --python 3.8` : 가상환경을 만든다.
+       - `$ pipenv shell` : 가상환경 안으로 들어간다.
+       - `$ pipenv run python3 my_code.py` : 가상환경에서 코드 실행하기
+       - `$ alias prp="pipenv run python3"` : 코드 단축어 별칭
+       - `$ pipenv install` : 협업 프로젝트를 할때, 프로젝트의 모든 개발자들은 Git 저장소에 올려둔 Pipfile 파일과 Pipfile.lock 파일을 내려받은 후에 pipenv install 커맨드로 모든 패키지를 한 번에 설치할 수 있다.
+       - `$ pipenv graph` : 프로젝트에 설치된 패키지들을 트리 구조로 시각화하여 보여준다.
+       - `$ pipenv --where` : Output project home information.
+       - `$ pipenv check` : 보안 취약점이 있는 패키지가 설치되어 있는지 간단하게 체크 가능
+       - `$ pipenv --rm` : 가상환경 제거
+       - [pipenv 명령어 공식 문서](https://pipenv.pypa.io/en/latest/cli/#cmdoption-pipenv-rm)
 
 <br>
 
@@ -71,6 +93,11 @@
      2. `$ conda activate 가상환경이름` : 가상환경 안으로 들어간다.
 
 <br>
+
+- [Python project set up in VSCode](#python-project-set-up-in-vscode)
+- [Python project set up in Pycharm](#python-project-set-up-in-pycharm)
+
+## Python project set up in VSCode
 
 7. vs-code에서 interpreter & linter 선택 & 설치
 
@@ -106,20 +133,51 @@
 
 <br>
 
-- pipenv 명령어 정리
+## Python project set up in Pycharm
 
-  - `$ pip install pipenv` : pipenv 설치
-  - `$ pip install pipenv --upgrade` : pipenv 업그레이드
-  - `$ pipenv --python 3.8` : 가상환경을 만든다.
-  - `$ pipenv shell` : 가상환경 안으로 들어간다.
-  - `$ pipenv run python3 my_code.py` : 가상환경에서 코드 실행하기
-  - `$ alias prp="pipenv run python3"` : 코드 단축어 별칭
-  - `$ pipenv install` : 협업 프로젝트를 할때, 프로젝트의 모든 개발자들은 Git 저장소에 올려둔 Pipfile 파일과 Pipfile.lock 파일을 내려받은 후에 pipenv install 커맨드로 모든 패키지를 한 번에 설치할 수 있다.
-  - `$ pipenv graph` : 프로젝트에 설치된 패키지들을 트리 구조로 시각화하여 보여준다.
-  - `$ pipenv --where` : Output project home information.
-  - `$ pipenv check` : 보안 취약점이 있는 패키지가 설치되어 있는지 간단하게 체크 가능
-  - `$ pipenv --rm` : 가상환경 제거
-  - [pipenv 명령어 공식 문서](https://pipenv.pypa.io/en/latest/cli/#cmdoption-pipenv-rm)
+7. [Pycharm 설치 링크](https://www.jetbrains.com/pycharm/)
+
+<br>
+
+8. 인터프리터 (가상환경 선택 또는 생성) 설정하고 프로젝트 열기 (폴더 열기)
+
+<br>
+
+9.
+
+<br>
+
+10. **black** formatter 설정
+
+    - **아나콘다 가상환경에서..**
+      1. **(base)** 환경에서 `pip install black`으로 **black** 패키지를 설치한다.
+      2. **(base)** 환경에서 `which black`으로 **black** 패키지의 경로를 체크하고 복사한다.
+      3. Pycharm에서 `command + ,` (`ctrl + ,`) 단축키로 설정창 열고 `Tools` 탭에서 `File Watchers`에 들어가서 `+`버튼을 클릭한 후 `<custom>` template를 선택한다.
+      4. 아래의 캡쳐 사진처럼 설정을 한다. (Program란에 복사한 black 패키지 경로를 설정한다.)
+    - **pipenv 가상환경에서..**
+
+      1. 프로젝트 가상환경에서 `pipenv install black`으로 **black** 설치한다.
+      2. `which black`으로 **black** 패키지의 경로를 체크하고 복사한다.
+      3. Pycharm에서 `command + ,` (`ctrl + ,`) 단축키로 설정창 열고 `Tools` 탭에서 `File Watchers`에 들어가서 `+`버튼을 클릭한 후 `<custom>` template를 선택한다.
+      4. 아래의 캡쳐 사진처럼 설정을 한다. (Program란에 복사한 black 패키지 경로를 설정한다.)
+
+    <img src="./image_for_markdown/pycharmblack.png" alt="img" width="100%" />
+
+<br>
+<br>
+
+11. **prettier** 설정
+
+    1. `node`를 설치한다.
+    2. `yarn`을 설치한다.
+    3. `yarn global add prettier`으로 prettier 패키지를 설치한다.
+    4. `which prettier`으로 prettier 패키지 경로를 체크하고 복사한다.
+    5. Pycharm에서 `command + ,` (`ctrl + ,`) 단축키로 설정창 열고 `Tools` 탭에서 `File Watchers`에 들어가서 `+`버튼을 클릭한 후 `<custom>` template를 선택한다.
+    6. 아래의 캡쳐 사진처럼 설정을 한다. (Program란에 복사한 prettier 패키지 경로를 설정한다.)
+
+    <img src="./image_for_markdown/prettier1.png" alt="img" width="100%" />
+    <br>
+    <img src="./image_for_markdown/prettier2.png" alt="img" width="100%" />
 
 <br>
 <br>
@@ -128,7 +186,7 @@
 
 <br>
 
-# conda 가상황경 설치하기 (Anaconda with Jupyter Notebook)
+# conda 가상환경 설치하기
 
 ### Anaconda
 
