@@ -143,30 +143,26 @@
 
 <br>
 
-9.
+9. **black** formatter 설정
 
-<br>
+   - **아나콘다 가상환경에서..**
+     1. **(base)** 환경에서 `pip install black`으로 **black** 패키지를 설치한다.
+     2. **(base)** 환경에서 `which black`으로 **black** 패키지의 경로를 체크하고 복사한다.
+     3. Pycharm에서 `command + ,` (`ctrl + ,`) 단축키로 설정창 열고 `Tools` 탭에서 `File Watchers`에 들어가서 `+`버튼을 클릭한 후 `<custom>` template를 선택한다.
+     4. 아래의 캡쳐 사진처럼 설정을 한다. (Program란에 복사한 black 패키지 경로를 설정한다.)
+   - **pipenv 가상환경에서..**
 
-10. **black** formatter 설정
+     1. 프로젝트 가상환경에서 `pipenv install black`으로 **black** 설치한다.
+     2. `which black`으로 **black** 패키지의 경로를 체크하고 복사한다.
+     3. Pycharm에서 `command + ,` (`ctrl + ,`) 단축키로 설정창 열고 `Tools` 탭에서 `File Watchers`에 들어가서 `+`버튼을 클릭한 후 `<custom>` template를 선택한다.
+     4. 아래의 캡쳐 사진처럼 설정을 한다. (Program란에 복사한 black 패키지 경로를 설정한다.)
 
-    - **아나콘다 가상환경에서..**
-      1. **(base)** 환경에서 `pip install black`으로 **black** 패키지를 설치한다.
-      2. **(base)** 환경에서 `which black`으로 **black** 패키지의 경로를 체크하고 복사한다.
-      3. Pycharm에서 `command + ,` (`ctrl + ,`) 단축키로 설정창 열고 `Tools` 탭에서 `File Watchers`에 들어가서 `+`버튼을 클릭한 후 `<custom>` template를 선택한다.
-      4. 아래의 캡쳐 사진처럼 설정을 한다. (Program란에 복사한 black 패키지 경로를 설정한다.)
-    - **pipenv 가상환경에서..**
+        - `/Users/amamov/opt/anaconda3/bin/black`
+        - `$FilePath$`
 
-      1. 프로젝트 가상환경에서 `pipenv install black`으로 **black** 설치한다.
-      2. `which black`으로 **black** 패키지의 경로를 체크하고 복사한다.
-      3. Pycharm에서 `command + ,` (`ctrl + ,`) 단축키로 설정창 열고 `Tools` 탭에서 `File Watchers`에 들어가서 `+`버튼을 클릭한 후 `<custom>` template를 선택한다.
-      4. 아래의 캡쳐 사진처럼 설정을 한다. (Program란에 복사한 black 패키지 경로를 설정한다.)
+   <br>
 
-         - `/Users/amamov/opt/anaconda3/bin/black`
-         - `$FilePath$`
-
-    <br>
-
-    <img src="./image_for_markdown/pycharmblack.png" alt="img" width="100%" />
+   <img src="./image_for_markdown/pycharmblack.png" alt="img" width="100%" />
 
 <br>
 <br>
